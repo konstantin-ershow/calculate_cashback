@@ -15,16 +15,12 @@ function calculateCashback(specialCategoryPurchases, otherCategoryPurchases) {
 }
 
 
+
+
 function handleSubmit(evt) {
     evt.preventDefault();
 
-    const specialAmountInputEl = document.getElementById('special-amount-input');
-    const specialAmount = Number(specialAmountInputEl.value);
-    const specialAmountErrorEl = document.getElementById('special-amount-error');
-    const specialCashbackEl = document.getElementById('special-cashback');
-    const totalCashbackEl = document.getElementById('total-cashback');
-    const otherCashbackEl = document.getElementById('other-cashback');
-    const otherAmountErrorEl = document.getElementById('other-amount-error');
+
 
     specialAmountErrorEl.textContent='';
     otherAmountErrorEl.textContent='';
@@ -41,7 +37,7 @@ function handleSubmit(evt) {
         return;
     }
 
-    const otherAmountInputEl = document.getElementById('other-amount-input');
+
     const otherAmount = Number(otherAmountInputEl.value);
 
     if (Number.isNaN(otherAmount)) {
@@ -65,3 +61,11 @@ function handleSubmit(evt) {
 const formEl = document.getElementById('cashback-form');
 formEl.onsubmit = handleSubmit;
 
+const specialAmountInputEl = document.getElementById('special-amount-input');
+const specialAmount = Number(specialAmountInputEl.value);
+const specialAmountErrorEl = document.getElementById('special-amount-error');
+const specialCashbackEl = document.getElementById('special-cashback');
+const totalCashbackEl = document.getElementById('total-cashback');
+const otherCashbackEl = document.getElementById('other-cashback');
+const otherAmountErrorEl = document.getElementById('other-amount-error');
+const otherAmountInputEl = document.getElementById('other-amount-input');
